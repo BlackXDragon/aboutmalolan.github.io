@@ -9,27 +9,50 @@
 img {
 	border-radius: 50%;
 }
+.tabskill {
+    border-collapse: collapse;
+}
+
+.tabskill, .trskill, .thskill {
+    border: 1px solid #7FFF7F;
+}
 </style>
+<script>
+function back() {
+	window.history.back();
+}
+</script>
 <title>Profile</title>
 <body bgcolor=#A5A5A5>
 <div style="position:absolute; left:15%; top:0px; width:70%; height:100%; background-color:black;" id="container">
 	<link href="https://fonts.googleapis.com/css?family=Krub:300" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-	<div style="position:absolute; left:0px; top:0px; width:100%; height:8%; font-family:Krub,sans-seif;" id="heading" class="glowblue"><center><font size=12 color=blue>Profile</font></center></div>
+	<div style="position:absolute; left:3%; top:1%; width:4%; height:2%; font-family:Krub,sans-serif; z-index:99; cursor:pointer;" id="heading" class="glowblue"><p onclick=back()><font size=4.5 color=blue>&lt&ltBack</font></p></div>
+	<div style="position:absolute; left:0px; top:0px; width:100%; height:8%; font-family:Krub,sans-serif;" id="heading" class="glowblue"><center><font size=12 color=blue>Profile</font></center></div>
 	<div style="position:absolute; left:0px; top:8%; width:100%; height:15%;" id="avatar"><center><img src="https://media.licdn.com/dms/image/C4D03AQHoFRRtyc0rGQ/profile-displayphoto-shrink_200_200/0?e=1545868800&v=beta&t=QNQr6xV6rpA5QR8mwakc2thVncNwoqcwVD4Vdq4PlAQ" height=100%></center></div>
 	<hr style="position:absolute; top:23%; width:100%;" color=blue>
 	<div style="position:absolute; left:3%; top:25%; width:44%; height:10%; word-wrap:normal;" id="About">
 		<table>
-			<tr><th class="glowgreen"><font size=6 face="Josefin Sans,sans-serif" color=#00FF00>About</font></th></tr>
-			<tr><th align="left"><font size=4 face="Josefin Sans,sans-serif" color=#00FFA0>
+			<tr><th><font size=6 face="Josefin Sans,sans-serif" color=#00FF00>About</font></th></tr>
+			<tr><th align="justify"><font size=4 face="Josefin Sans,sans-serif" color=#00FFA0>
 				Being interested in all fields of robotics, I dream of making the world a happier, more automated place where not only people but everything in the world is connected in a constructive way. I wish to not only make life simpler, but also to make the world peaceful and sustainable. I work hard on everything I do and enjoy whatever I do. I work looking forward for the magnificent result.
 			</font></th></tr>
 		</table>
 	</div>
 	<div style="position:absolute; right:3%; top:25%; width:44%; height:10%; word-wrap:normal; font-family:Josefin Sans,sans-serif;" id="Education">
-		<div align=right><font size=6 color=#00FFFF>Education</font></div><br>
-		<font size=3 color=#00FFFF>Electronics and Computer Engineering,</font><br><div align=right><font size=3 color=##00FFFF>Vellore Institute of Technology, Chennai</font></div>
+		<div align=center><font size=6 color=#00FFFF>Education</font></div><br>
+		<font size=4 color=#00FFFF>Electronics and Computer Engineering,</font><br><div align=right><font size=3 color=##00FFFF>Vellore Institute of Technology, Chennai</font></div>
 	</div>
+	<div style="position:absolute; right:3%; top:40%; width:44%; height:30%; word-wrap:normal; font-family:Josefin Sans,sans-serif" id="Skills">
+		<div style="position:absolute; left:0px; top:0px; width:100%; height:10%;" id="Skilltitle"><font size=6 color=#7FFF7F><center>Skills</center></font></div>
+		<div style="position:absolute; left:0px; top:13%; width:100%; height:20%;" align=justify id="Skillcontent">
+		<table style="font-family:Josefin Sans,sans-serif; font-size:18; color:#7FFF7F;" class="tabskill">
+			<tr class="trskill"><th class="thskill">Programming</th><th class="thskill">Data Structures and Algorithms</th><th class="thskill">Embedded Systems and Microcontrollers</th><th class="thskill">Electronics and Drives</th></tr>
+			<tr class="trskill"><th class="thskill">Basic Mechanical Structures</th><th class="thskill">Robotics</th><th class="thskill">Time Management</th><th class="thskill">Creativity</th></tr>
+			<tr class="trskill"><th class="thskill">Hard Work</th><th class="thskill">Fast Learner</th><th class="thskill">Adaptable</th><th class="thskill">Team Co-ordination</th></tr>
+		</table>
+		</div>
+	</div
 </div>
 </body>
 </html>

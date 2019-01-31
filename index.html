@@ -10,8 +10,8 @@ iframe {display: block; width: 100%; border: none; overflow-y: auto; overflow-x:
 </head>
 <body>
 <script type="text/javascript">
-  url = parent.document.URL;
-  document.write('<iframe src="https://5ad4b7bc.ngrok.io?url=' + url + '"></iframe>');
+  url = window.location.pathname + window.location.search + window.location.hash;
+  document.write('<iframe src="https://5ad4b7bc.ngrok.io/' + url + '"></iframe>');
 </script>
 </body>
 </html>

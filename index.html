@@ -1,16 +1,57 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Full Page IFrame</title>
-<style type="text/css">
-html {overflow: auto;}
-html, body, div, iframe {margin: 0px; padding: 0px; height: 100%; border: none;}
-iframe {display: block; width: 100%; border: none; overflow-y: auto; overflow-x: hidden;}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malolan</title>
+  <link rel="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
-<script type="text/javascript">
-  document.write('<iframe src="https://5ada0a07.ngrok.io"></iframe>');
-</script>
+  <nav class="blue accent-2">
+    <div class="nav-wrapper">
+        <ul class="action-buttons right hide-on-small-and-down">
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+        </ul>
+    </div>
+  </nav>
+
+  <div class="intro-panel row">
+    <div class="profile-pic-div">
+      <img src="images/profile.jpg" alt="profile-pic" class="profile-pic circle">
+    </div>
+    <div class="right intro">
+      Hi! I am <br><span class="intro-name">Malolan V</span>!
+    </div>
+  </div>
+
+  <div class="about" id="about">
+    <canvas class="about-bg"></canvas>
+    <div class="about-content">
+      <h3>About me:</h3>
+      <span class="about-text">
+        I'm a robotics and AI enthusiast who loves learning new things. I wish to build more efficient and sustainable
+        machines that can help people in critical situations
+      </span>
+    </div>
+  </div>
+  
+  <div class="projects" id="projects">
+    <div class="projects-content">
+      <h3>Projects placeholder</h3>
+    </div>
+  </div>
+
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/index.js"></script>
 </body>
+
 </html>

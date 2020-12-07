@@ -7,6 +7,7 @@ nav {
 	height: 10vh;
 	transition: top 0.3s;
 	position: fixed;
+	z-index: 999;
 }
 
 nav div ul li a {
@@ -64,6 +65,15 @@ nav div ul li a {
 	box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
 }
 
+.intro {
+	right: 20vw;
+	position: absolute;
+	top: 30vh;
+	font-size: 62px;
+	text-align: right;
+	color: #aaaaFF;
+}
+
 @media only screen and (max-width: 768px) {
 	/* For mobile phones: */
 	[class*="profile-pic-div"] {
@@ -75,19 +85,16 @@ nav div ul li a {
 	  margin-left: auto;
 	  margin-right: auto;
 	}
-	[class*="profile-pic"] {
-		/* transform: translateX(5%); */
-	  }
+	.intro {
+		position: absolute;
+		top: 60vh;
+		left: 0;
+		width: 100vw;
+		font-size: 62px;
+		text-align: center;
+		color: #aaaaFF;
+	}
   }
-
-.intro {
-	right: 20vw;
-	position: absolute;
-	top: 30vh;
-	font-size: 62px;
-	text-align: right;
-	color: #aaaaFF;
-}
 
 .intro-name {
 	color: #ffffff;
@@ -146,6 +153,18 @@ nav div ul li a {
 
 .about-text {
 	font-size: 1.3em;
+}
+
+@media only screen and (max-width: 768px) {
+	.about-content {
+		position: relative;
+		top: 5vh;
+		left: 10vw;
+		width: 80vw;
+		word-wrap: break-word;
+		text-align: justify;
+		color: white;
+	}
 }
 
 /* ----------- PROJECTS --------- */

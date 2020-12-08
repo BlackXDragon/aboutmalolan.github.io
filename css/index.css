@@ -235,6 +235,14 @@ nav div ul li a {
 	-webkit-box-orient: vertical;
 }
 
+@media only screen and (max-width: 768px) {
+	.projects-carousel .carousel-item {
+		width: 85%;
+		/* height: 100%; */
+		vertical-align: middle;
+	}
+}
+
 .projects-bg {
 	width: 100vw;
 	min-height: 100vh;

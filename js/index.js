@@ -1,3 +1,8 @@
+$(document).ready(function(){
+  $('.carousel').carousel();
+});
+
+
 /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
@@ -13,7 +18,7 @@ window.onscroll = function() {
 /* ---------------- Hypercube ------------- */
 
 /* RENDERING */
-const canvas = document.querySelector('.about-bg')
+const canvas = document.querySelector('.projects-bg')
 const ctx = canvas.getContext('2d')
 const start = Date.now()
 const DURATION = 10000 //ms

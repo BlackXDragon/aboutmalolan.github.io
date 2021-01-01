@@ -2,6 +2,15 @@ $(document).ready(function(){
   $('.carousel').carousel();
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.sidenav');
+  var instances = M.Sidenav.init(elems, {preventScrolling: true});
+});
+
+$('.sidenav > li > a').click(() => {
+  console.log("click!");
+  M.Sidenav.getInstance(document.getElementById('mobilenavbuttons')).close();
+});
 
 /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
 var prevScrollpos = window.pageYOffset;

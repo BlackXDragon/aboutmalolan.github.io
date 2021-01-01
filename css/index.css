@@ -16,6 +16,35 @@ nav div ul li a {
 	vertical-align: middle;
 }
 
+.sidenav, .sidenav-trigger {
+	display: none;
+	height: 100%;
+}
+
+i {
+	font-size: 10vh !important;
+}
+
+.sidenav li:nth-child(1) {
+	margin-top: 5px;
+}
+
+.sidenav li::after {
+	width: 96%;
+	content: "";
+	border-top: solid 2px grey;
+	position: absolute;
+    left: 2%;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 768px) {
+	/* For mobile phones: */
+	.sidenav, .sidenav-trigger {
+		display: initial;
+	}
+}
+
 /* ----------- INTRO --------- */
 
 .intro-panel {
@@ -189,6 +218,7 @@ nav div ul li a {
 	width: 30%;
 	/* height: 100%; */
 	vertical-align: middle;
+	margin: 0 5vw;
 }
 
 .projects-carousel .carousel-item .carousel-bg {

@@ -1,3 +1,6 @@
+var cw = $('.tech-item').width();
+$('.tech-item').css({'height':cw+'px'});
+
 $(document).ready(function(){
   $('.carousel').carousel();
 });

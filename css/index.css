@@ -3,6 +3,10 @@ html, body {
 	overflow-x: hidden;
 }
 
+.acrylic {
+	backdrop-filter: blur(3px);
+}
+
 nav {
 	height: 10vh;
 	transition: top 0.3s;
@@ -279,4 +283,72 @@ i {
 	z-index: -9;
 	margin-top: 0;
 	position: absolute;
+}
+
+/* ----------- TECHNOLOGIES --------- */
+
+.tech {
+	width: 100vw;
+	min-height: 100vh;
+	top: 300vh;
+	z-index: -10;
+	position: absolute;
+	font-weight: 1500;
+	padding-bottom: 10vh;
+}
+
+.tech::after {
+	width: 100vw;
+	min-height: 100%;
+	top: 0;
+	z-index: -10;
+	position: absolute;
+	content: ' ';
+	clip-path: polygon(0 0%, 100% 0, 100% 0%, 0 100%);
+	background-color: blue;
+}
+
+.tech-content {
+	position: relative;
+	top: 10vh;
+	left: 10vw;
+	width: 80vw;
+	word-wrap: break-word;
+	text-align: justify;
+}
+
+.tech-list {
+	width: 90%;
+	left: 5%;
+	margin-top: 10px;
+	height: 100%;
+}
+
+.tech-item {
+	margin-bottom: 10px;
+	z-index: 10;
+	position: relative;
+}
+
+.tech-item::before {
+	content: ' ';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-image: url("../images/shield.svg");
+	background-position: center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	filter: invert(100%);
+}
+
+.tech-item img {
+	position: absolute;
+	width: 60%;
+	max-height: 60%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }

@@ -341,7 +341,7 @@ i {
 	background-position: center;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
-	filter: invert(100%);
+	filter: invert(100%) drop-shadow( 5px 5px 5px rgba(0, 0, 0, .7));
 }
 
 .tech-item img {

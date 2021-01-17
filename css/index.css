@@ -1,6 +1,9 @@
 html, body {
 	max-width: 100vw;
 	overflow-x: hidden;
+	margin: 0;
+	min-height: 100vh;
+	padding: 0 0;
 }
 
 .acrylic {
@@ -40,6 +43,14 @@ i {
 	position: absolute;
     left: 2%;
     z-index: 1;
+}
+
+.mysection {
+	min-height: 100vh;
+	padding: 0;
+	width: 100vw;
+	overflow: hidden;
+	display: flex;
 }
 
 /* Tooltip container */
@@ -93,9 +104,10 @@ i {
 
 .intro-panel {
 	width: 100vw;
-	min-height: 90vh;
-	top: 10vh;
-	position: absolute;
+	min-height: 100vh;
+	padding-top: 10vh;
+	margin: 0;
+	/* position: absolute; */
 	z-index: -10;
 	
 	background: linear-gradient(270deg, #6400ff, #000cff, #007dff, #00ffc2, #08ff00, #79ff00, #9100ff);
@@ -179,7 +191,7 @@ i {
 	width: 100vw;
 	min-height: 100vh;
 	z-index: -10;
-	margin-top: 100vh;
+	/* margin-top: 100vh; */
 	/* background: radial-gradient(#000cff, #007dff, #00ffc2, #08ff00, #79ff00, #000cff, #007dff, #00ffc2, #08ff00, #79ff00, #000cff, #007dff, #00ffc2, #08ff00, #79ff00, #000cff, #007dff, #00ffc2, #08ff00, #79ff00, #000cff, #007dff, #00ffc2, #08ff00, #79ff00, #000cff, #007dff, #00ffc2, #08ff00, #79ff00, #000cff, #007dff, #00ffc2, #08ff00, #79ff00, #000cff, #007dff, #00ffc2, #08ff00, #79ff00, #000cff, #007dff, #00ffc2, #08ff00, #79ff00, #000cff, #007dff, #00ffc2, #08ff00, #79ff00, #000cff, #007dff, #00ffc2, #08ff00, #79ff00, #000cff, #007dff, #00ffc2, #08ff00, #79ff00, #000cff, #007dff, #00ffc2, #08ff00, #79ff00, #000cff, #007dff, #00ffc2, #08ff00, #79ff00, #000cff, #007dff, #00ffc2, #08ff00, #79ff00, #000cff, #007dff, #00ffc2, #08ff00, #79ff00, #000cff, #007dff, #00ffc2, #08ff00, #79ff00, #000cff, #007dff, #00ffc2, #08ff00, #79ff00, #000cff, #007dff, #00ffc2, #08ff00, #79ff00);
 	background-size: 100vw 100vw;
 	background-repeat: no-repeat;
@@ -238,12 +250,12 @@ i {
 	width: 100vw;
 	min-height: 100vh;
 	z-index: -10;
-	position: absolute;
+	/* position: absolute; */
 }
 
 .projects-content {
 	position: relative;
-	top: 10vh;
+	/* top: 10vh; */
 	left: 10vw;
 	width: 80vw;
 	word-wrap: break-word;
@@ -263,6 +275,11 @@ i {
 	/* height: 100%; */
 	vertical-align: middle;
 	margin: 0 5vw;
+	cursor: grab;
+}
+
+.projects-carousel .carousel-item:active {
+	cursor: grabbing;
 }
 
 .projects-carousel .carousel-item .carousel-bg {
@@ -290,6 +307,7 @@ i {
 	display: -webkit-box;
 	-webkit-line-clamp: 1;
 	-webkit-box-orient: vertical;
+	cursor: pointer;
 }
 
 .projects-carousel .carousel-item .carousel-bg .project-desc {
@@ -330,9 +348,9 @@ i {
 .tech {
 	width: 100vw;
 	min-height: 100vh;
-	top: 300vh;
-	z-index: -10;
-	position: absolute;
+	/* top: 300vh; */
+	z-index: 10;
+	position: relative;
 	font-weight: 1500;
 	padding-bottom: 10vh;
 }
@@ -341,7 +359,7 @@ i {
 	width: 100vw;
 	min-height: 100%;
 	top: 0;
-	z-index: -10;
+	z-index: 10;
 	position: absolute;
 	content: ' ';
 	clip-path: polygon(0 0%, 100% 0, 100% 0%, 0 100%);
@@ -355,18 +373,20 @@ i {
 	width: 80vw;
 	word-wrap: break-word;
 	text-align: justify;
+	z-index: 100;
+	height: fit-content;
 }
 
 .tech-list {
 	width: 90%;
 	left: 5%;
 	margin-top: 10px;
-	height: 100%;
+	height: fit-content;
 }
 
 .tech-item {
 	margin-bottom: 10px;
-	z-index: 10;
+	z-index: 1000;
 	position: relative;
 	cursor: pointer;
 }
@@ -397,4 +417,64 @@ i {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+/* ----------- SOCIAL --------- */
+
+.social {
+	width: 100vw;
+	min-height: 30vh;
+	z-index: -10;
+	background-color: black;
+}
+
+.social-content {
+	position: relative;
+	padding: 10px 20px;
+	width: calc(100vw - 40px);
+	word-wrap: break-word;
+	text-align: justify;
+}
+
+.social-item .card-panel {
+	padding: 5px;
+	align-items: center;
+	vertical-align: middle;
+	width: fit-content;
+	position: relative;
+	cursor: pointer;
+	background-color: #555555;
+	transition-duration: 150ms;
+}
+
+.social-item .card-panel:hover {
+	background-color: #aaaaaa;
+}
+
+.social-item .card-panel::before {
+	content: ' ';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	box-shadow: 3px 3px 3px #cccccc;
+	transition-duration: 150ms;
+}
+
+.social-item .card-panel:hover::before {
+	box-shadow: 5px 5px 5px #cccccc;
+}
+
+.social-item .icon {
+	display: inline;
+}
+
+.social-item .icon img {
+	max-width: 25px;
+}
+
+.social-item .text {
+	display: inline;
+	padding-left: 0px;
 }

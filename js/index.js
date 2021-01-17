@@ -19,7 +19,7 @@ $('.tech-item').click(function() {
   window.open($(this).attr('data-homepage'), "_blank");
 });
 
-$('.contact-item > .card-panel').click(function() {
+$('.social-item > .card-panel').click(function() {
   window.open($(this).parent().attr('data-url'), "_blank");
 });
 

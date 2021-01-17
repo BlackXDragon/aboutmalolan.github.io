@@ -11,8 +11,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 $('.sidenav > li > a').click(() => {
-  console.log("click!");
+  // console.log("click!");
   M.Sidenav.getInstance(document.getElementById('mobilenavbuttons')).close();
+});
+
+$('.tech-item').click(function() {
+  window.open($(this).attr('data-homepage'), "_blank");
 });
 
 /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */

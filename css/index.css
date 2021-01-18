@@ -412,7 +412,7 @@ i {
 
 .tech-item img {
 	position: absolute;
-	width: 60%;
+	max-width: 60%;
 	max-height: 60%;
 	top: 50%;
 	left: 50%;
@@ -431,7 +431,7 @@ i {
 .social-content {
 	position: relative;
 	padding: 10px 20px;
-	width: calc(100vw - 40px);
+	width: 100vw;
 	word-wrap: break-word;
 	text-align: justify;
 }
@@ -445,6 +445,7 @@ i {
 	cursor: pointer;
 	background-color: #555555;
 	transition-duration: 150ms;
+	margin: 5px auto;
 }
 
 .social-item .card-panel:hover {
@@ -477,4 +478,19 @@ i {
 .social-item .text {
 	display: inline;
 	padding-left: 0px;
+}
+
+@media only screen and (max-width: 768px) {
+	.social-item .icon {
+		padding: 0 2px 0 1px;
+	}
+
+	.social-item .icon img {
+		max-width: 15px;
+	}
+	
+	.social-item .text {
+		font-size: 80%;
+		padding-right: 2px;
+	}
 }
